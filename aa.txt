@@ -1,0 +1,39 @@
+Primeira Iteração:
+
+minimax(board, 0, True) é chamado.
+score = evaluate(board) retorna 0 (nenhuma vitória).
+is_moves_left(board) retorna True.
+is_max é True, então best é inicializado com -inf.
+Loop inicializa: i = 0, j = 0, 1, 2 (nenhuma célula vazia).
+Segunda Iteração:
+
+i = 1, j = 0: célula vazia.
+board[1][0] = PLAYER (simula jogada X).
+Chama minimax(board, 1, False).
+score = evaluate(board) retorna 0.
+is_moves_left(board) retorna True.
+is_max é False, então best é inicializado com inf.
+Terceira Iteração:
+
+Loop inicializa: i = 0, 1, j = 0, 1, 2 (verifica células vazias).
+i = 1, j = 2: célula vazia.
+board[1][2] = OPPONENT (simula jogada O).
+Chama minimax(board, 2, True).
+Quarta Iteração:
+
+score = evaluate(board) retorna 0.
+is_moves_left(board) retorna True.
+is_max é True, então best é inicializado com -inf.
+Loop inicializa: i = 0, 1, 2, j = 0, 1, 2 (verifica células vazias).
+i = 2, j = 0: célula vazia.
+board[2][0] = PLAYER (simula jogada X).
+Chama minimax(board, 3, False).
+Quinta Iteração:
+
+score = evaluate(board) retorna 0.
+is_moves_left(board) retorna True.
+is_max é False, então best é inicializado com inf.
+Loop inicializa: i = 0, 1, 2, j = 0, 1, 2 (verifica células vazias).
+i = 2, j = 1: célula vazia.
+board[2][1] = OPPONENT (simula jogada O).
+Chama minimax(board, 4, True).
